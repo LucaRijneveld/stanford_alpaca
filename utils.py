@@ -104,7 +104,7 @@ def openai_completion(
                     **decoding_kwargs,
                 )
                 model="gpt-3.5-turbo"
-                completion_batch = openai.chat.completions.create(prompt=prompt_batch,model=model, stream=True)
+                completion_batch = openai.chat.completions.create(prompt=prompt_batch, model=model, **shared_kwargs)
                 choices = completion_batch.choices
 
                 for choice in choices:
