@@ -13,7 +13,7 @@ import tqdm
 from openai import OpenAI
 import copy
 
-StrOrOpenAIObject = Union[str, OpenAI.completions]
+StrOrOpenAIObject = Union[str, OpenAI]
 
 openai_org = os.getenv("OPENAI_ORG")
 if openai_org is not None:
